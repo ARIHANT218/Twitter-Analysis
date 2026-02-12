@@ -1,82 +1,75 @@
-Twitter Sentiment Analysis
+# Twitter Sentiment Analysis
 
-This project is an end-to-end Machine Learning pipeline that analyzes tweets and classifies them as Positive or Negative.
+## Overview
 
-📌 Project Overview
+This project is an end-to-end Machine Learning pipeline that analyzes
+tweets and classifies them as **Positive** or **Negative** sentiment.
 
-The goal of this project is to understand public sentiment from Twitter data using Natural Language Processing (NLP) and Machine Learning.
+The objective is to understand public opinion using Natural Language
+Processing (NLP) techniques and supervised machine learning models.
 
-The system:
+------------------------------------------------------------------------
 
-Collects tweets using Twitter API v2
+## System Workflow
 
-Cleans and preprocesses text data
+### 1. Data Collection
 
-Converts text into numerical format using TF-IDF
+-   Tweets collected using Twitter API v2
+-   Data stored in structured format for processing
 
-Trains ML models for classification
+### 2. Data Preprocessing
 
-Displays results using a Streamlit dashboard
+-   Remove URLs, mentions, and special characters
+-   Convert text to lowercase
+-   Remove stopwords using NLTK
+-   Perform tokenization
 
-🛠 Tech Stack
+### 3. Feature Engineering
 
-Python
+-   Convert text into numerical vectors using TF-IDF Vectorization
+-   Control dimensionality using feature limits
 
-Pandas
+### 4. Model Training
 
-NLTK
+Models trained: - Logistic Regression - Naive Bayes - Random Forest
 
-Scikit-learn
+Logistic Regression achieved **80%+ accuracy** and performed best on
+sparse TF-IDF features.
 
-Streamlit
+### 5. Model Evaluation
 
-Twitter API v2
-
-⚙️ How the Project Works
-1️⃣ Data Collection
-
-Tweets are collected using Twitter API v2 and stored for processing.
-
-2️⃣ Data Preprocessing
-
-Remove URLs, mentions, special characters
-
-Convert text to lowercase
-
-Remove stopwords
-
-Tokenization
-
-3️⃣ Feature Engineering
-
-Text is converted into numerical vectors using TF-IDF Vectorization
-
-4️⃣ Model Training
-
-Trained multiple models:
-
-Logistic Regression
-
-Naive Bayes
-
-Random Forest
-
-Logistic Regression achieved 80%+ accuracy.
-
-5️⃣ Model Evaluation
-
-Evaluated using:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-Score
-
+Evaluation metrics used: - Accuracy - Precision - Recall - F1-Score -
 Confusion Matrix
 
-6️⃣ Deployment
+### 6. Deployment
 
-The trained model is saved using pickle and deployed using a Streamlit dashboard for real-time sentiment prediction.
+-   Model and vectorizer saved using pickle
+-   Integrated with a Streamlit dashboard
+-   Enables real-time sentiment prediction
+
+------------------------------------------------------------------------
+
+## Tech Stack
+
+-   Python
+-   Pandas
+-   NLTK
+-   Scikit-learn
+-   Streamlit
+-   Twitter API v2
+
+------------------------------------------------------------------------
+
+## How to Run
+
+1.  Install dependencies: pip install -r requirements.txt
+
+2.  Run the application: streamlit run app.py
+
+------------------------------------------------------------------------
+
+## Key Features
+
+-   Processes 1.6M+ tweets
+-   Real-time sentiment prediction
+-   Interactive dashboard visualization
